@@ -17,7 +17,7 @@ def main(regrex):
             pytxt = "keyboard.send_keys(\"" + send + "+" + hotkey + "\")"
 
 
-            file_python = open(description + '.py', 'w')
+            file_python = open('../ctrl-hyper/' + description + '.py', 'w')
             file_python.write(pytxt)
             file_python.close()
 
@@ -26,7 +26,7 @@ def main(regrex):
             json_data["hotkey"]["hotKey"] = hotkey
             json_data["hotkey"]["modifiers"][0] = "<" + modifier + ">"
 
-            file_json = open('.' + description + ".json", 'w')
+            file_json = open('../ctrl-hyper/.' + description + ".json", 'w')
             json.dump(json_data, file_json, indent=4)
 
             file_json.close()
