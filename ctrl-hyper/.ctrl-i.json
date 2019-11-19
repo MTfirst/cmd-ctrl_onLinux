@@ -22,7 +22,7 @@
     ],
     "showInTrayMenu": false,
     "filter": {
-        "regex": "code.Code",
+        "regex": "gnome-terminal-server.Gnome-terminal",
         "isRecursive": false
     },
     "type": "script",

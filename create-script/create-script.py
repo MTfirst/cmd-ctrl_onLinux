@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     # 1: manually input
     # 2: auto-detect
-    if 0:
+    if 1:
         regex = "gnome-terminal-server.Gnome-terminal"
     else :
         print("Click your Terminal Window")
