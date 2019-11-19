@@ -1,5 +1,7 @@
 import json
 import string
+import subprocess
+import re
 
 def main(regrex):
     f = open("sample.json", "r")
@@ -36,5 +38,19 @@ def main(regrex):
 
 if __name__ == "__main__":
     # input your favorite terminal
-    regrex = "gnome-terminal-server.Gnome-terminal"
+
+
+    # 1: manually input
+    # 2: auto-detected
+    if 1:
+        regrex = "gnome-terminal-server.Gnome-terminal"
+    else :
+        print("Click your Terminal Window")
+        cmd = "xprop | grep WM_CLASS"
+        regrex_str = subprocess.check_output(cmd, shell=True, encoding='utf-8')
+        regrex_list = re.findall('\".*\"', regrex_str)[0].split(',')
+        regrex = regrex_list[0].strip('\"') + '.' + regrex_list[1].strip(' ').strip('\"')
+   
+   
+    print(regrex) 
     main(regrex)
