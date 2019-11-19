@@ -4,7 +4,7 @@ Please reference to [my article(Qiita: Japanese IT knowledge website)](https://q
 
 ## How To use
 1. Install [AutoKey](https://github.com/autokey/autokey).
-2. Open `./create-script/create-script.py` and edit variable `regrex` as your favorite terminal name(at 39 line).
+2. Open `./create-script/create-script.py` and edit variable `regex` as your favorite terminal name(at 39 line).
 3. Run `create-script.py`
 4. copy "ctrl-hyper" directry at `~/.config/autokey/data`
 

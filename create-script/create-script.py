@@ -3,11 +3,12 @@ import string
 import subprocess
 import re
 
-def main(regrex):
+def main(regex):
     f = open("sample.json", "r")
     json_data = json.load(f)
+    print(regex)
 
-    json_data["filter"]["regrex"] = regrex
+    json_data["filter"]["regex"] = regex
 
     hotkeys = string.ascii_lowercase[:26]
     modifiers = ['ctrl', 'hyper']
@@ -42,15 +43,13 @@ if __name__ == "__main__":
 
     # 1: manually input
     # 2: auto-detect
-    if 1:
-        regrex = "gnome-terminal-server.Gnome-terminal"
+    if 0:
+        regex = "gnome-terminal-server.Gnome-terminal"
     else :
         print("Click your Terminal Window")
         cmd = "xprop | grep WM_CLASS"
-        regrex_str = subprocess.check_output(cmd, shell=True, encoding='utf-8')
-        regrex_list = re.findall('\".*\"', regrex_str)[0].split(',')
-        regrex = regrex_list[0].strip('\"') + '.' + regrex_list[1].strip(' ').strip('\"')
-   
-   
-    print(regrex) 
-    main(regrex)
+        regex_str = subprocess.check_output(cmd, shell=True, encoding='utf-8')
+        regex_list = re.findall('\".*\"', regex_str)[0].split(',')
+        regex = regex_list[0].strip('\"') + '.' + regex_list[1].strip(' ').strip('\"')
+
+    main(regex)

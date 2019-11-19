@@ -22,9 +22,8 @@
     ],
     "showInTrayMenu": false,
     "filter": {
-        "regex": "gnome-terminal-server.Gnome-terminal",
-        "isRecursive": false,
-        "regrex": "gnome-terminal-server.Gnome-terminal"
+        "regex": "code.Code",
+        "isRecursive": false
     },
     "type": "script",
     "store": {}
