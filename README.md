@@ -1,6 +1,6 @@
 # cmd-ctrl_onLinux
 This is AutoKey settings files on Linux.
-Please reference to [my post Qiita(Japanese IT knowledge website)](https://)
+Please reference to [my article(Qiita: Japanese IT knowledge website)](https://qiita.com/MTfirst/items/61bc6b8d3da9742b4130)
 
 ## How To use
 1. Install [AutoKey](https://github.com/autokey/autokey).
@@ -13,5 +13,5 @@ At #2, if you don't know class name, enter the command below and click your term
 xprop | grep WM_CLASS
 #WM_CLASS(STRING) = "gnome-terminal-server", "Gnome-terminal"
 ```
-If WM_CLASS(STRING) = "x", "y", As a result, `regrex = x.y`  
+If WM_CLASS(STRING) = "x", "y", As a result, regrex is `x.y`  
 (For example, `"gnome-terminal-server.Gnome-terminal"`)
