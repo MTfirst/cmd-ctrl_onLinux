@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
 
     # 1: manually input
-    # 2: auto-detected
+    # 2: auto-detect
     if 1:
         regrex = "gnome-terminal-server.Gnome-terminal"
     else :
